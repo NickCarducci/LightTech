@@ -180,9 +180,9 @@ export default class App extends React.Component {
                   : "https://www.dl.dropboxusercontent.com/s/o1sfjemvvrltphz/6520305.png?dl=0"
               }
               float="right"
-              title="light-tech-certified"
+              title="saverparty.xyz squirrel/chipmunk"
               scrolling={this.state.scrolling}
-              fwd={this["scrollImg" + 1]}
+              fwd={this["scrollImg" + 3]}
               scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
               scrollTop={this.state.scrollTop}
             />
@@ -198,6 +198,34 @@ export default class App extends React.Component {
           population for extrapolation none-the-less @AP @google and days prior
           @northjersy dismayed potentially 2.4m nj registered-voters for Jo
           Jorgensen or a Nick Carducci write in unsolicited
+          <Cable
+            style={{ height: "340px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.noyoutube
+                ? ""
+                : "https://drive.google.com/file/d/10qfhlzvNSDXMkdEdMOISaLum0ur1dd44/preview"
+            }
+            float="right"
+            title="Tory (GBNews) - Patrick O'Flynn business over labor shill"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + 2]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h2>
+            free rider mutable state laundering profits of labor to small,
+            existing business. GIVE UPSTARTS A CHANCE $12k/year/p debt,
+            $3k/year/p bonds, $64/year/p checking
+          </h2>
+          “Keeping businesses afloat,” the only thing kept afloat is
+          collateralized debt serviced and uncollateralized bailed out, at cost
+          of work deficit unappreciated out park durables the most operation
+          non-costable and maintainless no rent-seeking. Existing business trust
+          building for landlord lender insurer deficit, instead of capping rent
+          at 5 units or 30 days, not price, to worse the sale, and no script
+          barrier to drug entry nor immigration nor union
           <br />
           <br />
           <a href="https://NickCarducci2022.com">#SalesTaxOnly</a>
@@ -228,17 +256,22 @@ export default class App extends React.Component {
               //position: "relative"
             }}
           >
-            <a
-              style={{
-                backgroundColor: "rgba(255,255,255,.8)",
-                height: "100%"
-              }}
-              href="https://lightte.ch"
-            >
-              <img
-                style={{ height: "100%", width: "auto" }}
-                alt="light-tech-certified"
-                src="https://www.dl.dropboxusercontent.com/s/aj6j953nt8dy7ez/LightTech%20Certified%20%281%29.png?dl=0"
+            <a href="https://lightte.ch">
+              <Cable
+                style={{ width: "60px" }}
+                onError={handleScollImgError}
+                img={true}
+                src={
+                  this.state.noyoutube
+                    ? ""
+                    : "https://www.dl.dropboxusercontent.com/s/aj6j953nt8dy7ez/LightTech%20Certified%20%281%29.png?dl=0"
+                }
+                float="right"
+                title="light-tech-certified"
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + 1]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.scrollTop}
               />
             </a>
             LightTe.ch Certified
