@@ -74,25 +74,7 @@ export default class App extends React.Component {
       const check = () => {
         if (this.props.pathname === "/") {
         } else if (this.props.pathname === "/polio") {
-          window.scroll(0, this.polio.current.offsetTop);
-        } else if (this.props.pathname === "/claims") {
-          this.setState(
-            {
-              insurance: true
-            },
-            () => window.scroll(0, this.claims.current.offsetTop)
-          );
-        } else if (this.props.pathname === "/walter") {
-          window.scroll(0, this.walter.current.offsetTop);
-        } else if (this.props.pathname === "/testing") {
-          window.scroll(0, this.pcr.current.offsetTop);
-        } else if (this.props.pathname === "/jury") {
-          this.setState(
-            {
-              juryPermitting: true
-            },
-            () => window.scroll(0, this.jury.current.offsetTop)
-          );
+          // window.scroll(0, this.polio.current.offsetTop);
         }
       };
       check();
@@ -208,7 +190,7 @@ export default class App extends React.Component {
                 : "https://drive.google.com/file/d/10qfhlzvNSDXMkdEdMOISaLum0ur1dd44/preview"
             }
             float="right"
-            title="Tory (GBNews) - Patrick O'Flynn business over labor shill"
+            title="Tory (Allistair Stewart,GBNews) - Patrick O'Flynn business over labor shill"
             scrolling={this.state.scrolling}
             fwd={this["scrollImg" + 2]}
             scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
