@@ -1,5 +1,4 @@
 import React from "react";
-import Insidious from "./Insidious";
 import Cable from "./Dropwire";
 import { UAParser } from "ua-parser-js";
 import TwitterTweetEmbed from "./TwitterTweetEbed";
@@ -458,7 +457,25 @@ export default class App extends React.Component {
           advertisement of no easier option
           <br />
           <br />9 years to build a house / 4 months with 7 people
-          <Insidious />
+          <Cable
+            style={{
+              width: "550px",
+              height: "700px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.noyoutube
+                ? ""
+                : "https://fred.stlouisfed.org/graph/graph-landing.php?g=MnNS&width=500&height=600"
+            }
+            float={null}
+            title="9 years to build a house / 4 months with 7 people - https://fred.stlouisfed.org/graph/?g=MnNS"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
           Armed robbery, if never pulled trigger you shouldn't assume danger;
           address then just call the accountants @IRS
           <br />
