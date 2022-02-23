@@ -97,9 +97,18 @@ export default class App extends React.Component {
       margin: "10px"
     };
     const { marginTop } = this.state;
+    let arrayOfnumbers = 0;
+    const scrollnum = () => {
+      arrayOfnumbers = arrayOfnumbers + 1; //arrayOfnumbers[arrayOfnumbers.length - 1] + 1;
+      //arrayOfnumbers.push(num);
+      //console.log(arrayOfnumbers)
+      return arrayOfnumbers;
+    };
+    const space = " ";
     return (
       <div
         style={{
+          fontWeight: "bolder",
           fontFamily: "'Shizuru', cursive",
           wordBreak: "break-word",
           width: "100%",
@@ -135,94 +144,6 @@ export default class App extends React.Component {
             maxWidth: "600px"
           }}
         >
-          Keep nationalists out of socialist policy (
-          <a href="https://bankingisnot.biz">corporate profit flaccid loss</a>)
-          <h2>
-            no-quo constitutes a non-taxable gift, AFTER cash:debt*income thru
-            history; truncated production tax
-          </h2>
-          <TwitterTweetEmbed
-            style={{ float: "left", width: "300px" }}
-            key="1416803308824633347"
-            tweetId="1416803308824633347"
-          />
-          LightTech alternative to debt-jailor government victimization, rent
-          seeking and gentrification for useless price inelasticity of
-          bid-to-ask and laborless-demand work deficit, unreigned scientific
-          power beyond arresting officer evidence or no jail for bail
-          <br />
-          <a href="https://foiegras.life">
-            <Cable
-              style={{ width: "60px" }}
-              onError={handleScollImgError}
-              img={true}
-              src={
-                this.state.noyoutube
-                  ? ""
-                  : "https://www.dl.dropboxusercontent.com/s/o1sfjemvvrltphz/6520305.png?dl=0"
-              }
-              float="right"
-              title="saverparty.xyz squirrel/chipmunk"
-              scrolling={this.state.scrolling}
-              fwd={this["scrollImg" + 3]}
-              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-              scrollTop={this.state.scrollTop}
-            />
-          </a>
-          targeting gdp or hours worked instead of
-          inverse-home-prices/hours-worked is a method of retardation
-          <br />
-          <br />
-          you can only take necessary action to protect an institution that is
-          not certifying without proof, of which signature and no
-          unexpected-excess death is not; as well as 4400% assets on the line
-          and survey bias of calling at 61% without even shuffling total
-          population for extrapolation none-the-less @AP @google and days prior
-          @northjersy dismayed potentially 2.4m nj registered-voters for Jo
-          Jorgensen or a Nick Carducci write in unsolicited
-          <Cable
-            style={{ height: "340px" }}
-            onError={handleScollImgError}
-            //img={true}
-            src={
-              this.state.noyoutube
-                ? ""
-                : "https://drive.google.com/file/d/10qfhlzvNSDXMkdEdMOISaLum0ur1dd44/preview"
-            }
-            float="right"
-            title="Tory (Allistair Stewart,GBNews) - Patrick O'Flynn business over labor shill"
-            scrolling={this.state.scrolling}
-            fwd={this["scrollImg" + 2]}
-            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-            scrollTop={this.state.scrollTop}
-          />
-          <h2>
-            free rider mutable state laundering profits of labor to small,
-            existing business. GIVE UPSTARTS A CHANCE $12k/year/p debt,
-            $3k/year/p bonds, $64/year/p checking
-          </h2>
-          “Keeping businesses afloat,” the only thing kept afloat is
-          collateralized debt serviced and uncollateralized bailed out, at cost
-          of work deficit unappreciated out park durables the most operation
-          non-costable and maintainless no rent-seeking. Existing business trust
-          building for landlord lender insurer deficit, instead of capping rent
-          at 5 units or 30 days, not price, to worse the sale, and no script
-          barrier to drug entry nor immigration nor union
-          <br />
-          <br />
-          <a href="https://NickCarducci2022.com">#SalesTaxOnly</a>
-          &nbsp;#InvoicesAreTheft #ReverseM2Inflation #CashDebtGainLoss
-          #ImplausibleLandlordUse #SewagePolice NickCarducci2022.com Independent
-          candidate for 2022 US Senate for NJ. consumer protection x equity
-          protection (
-          <a href="https://johnshopkins.academia.edu/NickCarducci">
-            anti-credit, anti-rentier, Saver, bottom-right
-          </a>
-          ). UBI is not only laundering a century of m2 inflation (exponential,
-          compound-interest, 7.5%) over checking (7.5%), but war-mongering
-          (Booker, Menendez, Neodem, top-left)
-          <br />
-          <br />
           Add this to your corporate website if you:
           <br />
           1) are an&nbsp;<b>ngo</b>,&nbsp;<b>non-profit</b>, that pays&nbsp;
@@ -230,33 +151,36 @@ export default class App extends React.Component {
           <br />
           2) do not take credit or permit merchants that do
           <br />
+          or) use any part of your revenue (cash-only, not insurer, lender, nor
+          landlord), on a civic tech item
+          <br />
+          <br />
           <div
             style={{
-              alignItems: "center",
-              display: "flex",
+              float: "right",
               height: "56px"
               //position: "relative"
             }}
           >
-            <a href="https://lightte.ch">
-              <Cable
-                style={{ width: "60px" }}
-                onError={handleScollImgError}
-                img={true}
-                src={
-                  this.state.noyoutube
-                    ? ""
-                    : "https://www.dl.dropboxusercontent.com/s/aj6j953nt8dy7ez/LightTech%20Certified%20%281%29.png?dl=0"
-                }
-                float="right"
-                title="light-tech-certified"
-                scrolling={this.state.scrolling}
-                fwd={this["scrollImg" + 1]}
-                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-                scrollTop={this.state.scrollTop}
-              />
-            </a>
-            LightTe.ch Certified
+            <Cable
+              style={{ width: "60px" }}
+              onError={handleScollImgError}
+              img={true}
+              src={
+                this.state.noyoutube
+                  ? ""
+                  : "https://www.dl.dropboxusercontent.com/s/aj6j953nt8dy7ez/LightTech%20Certified%20%281%29.png?dl=0"
+              }
+              float={null}
+              title="light-tech-certified"
+              scrolling={this.state.scrolling}
+              fwd={this["scrollImg" + scrollnum()]}
+              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+              scrollTop={this.state.scrollTop}
+            />
+            LightTe.ch
+            <br />
+            Certified
           </div>
           Testimonies from our other lightte.ch members: ["I'm kind of like the
           anti-Dan Price!"]
@@ -278,7 +202,7 @@ export default class App extends React.Component {
             </span>
           </h1>
           * estimated per current prices, to moderate with&nbsp;
-          <a href="https://">late-deflation</a>
+          <a href="https://fred.stlouisfed.org/graph/?g=MnMn">late-deflation</a>
           <br />
           Definitions:
           <br />
@@ -291,16 +215,29 @@ export default class App extends React.Component {
           <a href="https://3under2.us">tax-receipt disbursements</a>
           &nbsp;and&nbsp;
           <a href="https://vaults.biz">fines</a>)
-          <br />
-          <br />
-          <a href="https://vianickcarducci.medium.com/optimal-security-for-webapps-dd2a65c2418c">
+          <h2>
+            {/*"https://vianickcarducci.medium.com/optimal-security-for-webapps-dd2a65c2418c"*/}
             Optimal Security for WebApps
+          </h2>
+          Login needs identifier and a dashboard for police with warning on only
+          threats, non-objectivity not necessarily spam/harassment is a threat
+          in defamation which is adjudicated after a cease and desist order by
+          opinions finding facts to stop each other from being echoed but still
+          there to see what is wrong (
+          <a href="https://thumbprint.us/privacy">
+            I believe the platform can ban service for net-aggressive threats,
+            plans of attack or harassment
           </a>
+          ). False or misinformation must be collaborated with for Public
+          Health.
           <br />
           <br />
-          9 years of work to buy a median house and nothing else in a perfectly
-          efficient economy it would cost how much it takes to build (now about
-          2.9 years due to counterfeit-wagering)
+          <a href="https://fred.stlouisfed.org/graph/?g=MnMs">
+            9 years of work to buy a median house
+          </a>
+          {space}and nothing else in a perfectly efficient economy it would cost
+          how much it takes to build (now about 2.9 years due to
+          counterfeit-wagering)
           <br />
           <br />
           <a href="https://30under5.us">30under5.us</a>
@@ -422,12 +359,103 @@ export default class App extends React.Component {
             profit-share/equity
           </div>
           <br />
-          Threat is legal, plan of attack is not, castle doctrine over
-          rent-seeking-colonialism & counterfeit-in-contract credit and
-          collusion of @uscourts to not reimburse borrowers' customers money
-          upon reposession, and not be malfeasant in following the doctrine of
-          impossibility and castle doctrine, colluding with other governments
-          under the false advertisement of no easier option
+          Keep nationalists out of socialist policy (
+          <a href="https://bankingisnot.biz">corporate profit flaccid loss</a>)
+          <h2>
+            no-quo constitutes a non-taxable gift, AFTER cash:debt*income thru
+            history; truncated production tax
+          </h2>
+          <TwitterTweetEmbed
+            style={{ float: "left", width: "300px" }}
+            key="1416803308824633347"
+            tweetId="1416803308824633347"
+          />
+          LightTech alternative to debt-jailor government victimization, rent
+          seeking and gentrification for useless price inelasticity of
+          bid-to-ask and laborless-demand work deficit, unreigned scientific
+          power beyond arresting officer evidence or no jail for bail
+          <br />
+          <a href="https://foiegras.life">
+            <Cable
+              style={{ width: "60px" }}
+              onError={handleScollImgError}
+              img={true}
+              src={
+                this.state.noyoutube
+                  ? ""
+                  : "https://www.dl.dropboxusercontent.com/s/o1sfjemvvrltphz/6520305.png?dl=0"
+              }
+              float="right"
+              title="saverparty.xyz squirrel/chipmunk"
+              scrolling={this.state.scrolling}
+              fwd={this["scrollImg" + scrollnum()]}
+              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+              scrollTop={this.state.scrollTop}
+            />
+          </a>
+          targeting gdp or hours worked instead of
+          inverse-home-prices/hours-worked is a method of retardation
+          <br />
+          <br />
+          you can only take necessary action to protect an institution that is
+          not certifying without proof, of which signature and no
+          unexpected-excess death is not; as well as 4400% assets on the line
+          and survey bias of calling at 61% without even shuffling total
+          population for extrapolation none-the-less @AP @google and days prior
+          @northjersy dismayed potentially 2.4m nj registered-voters for Jo
+          Jorgensen or a Nick Carducci write in unsolicited
+          <Cable
+            style={{ height: "340px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.noyoutube
+                ? ""
+                : "https://drive.google.com/file/d/10qfhlzvNSDXMkdEdMOISaLum0ur1dd44/preview"
+            }
+            float="right"
+            title="Tory (Allistair Stewart,GBNews) - Patrick O'Flynn business over labor shill"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h2>
+            free rider mutable state laundering profits of labor to small,
+            existing business. GIVE UPSTARTS A CHANCE $12k/year/p debt,
+            $3k/year/p bonds, $64/year/p checking
+          </h2>
+          “Keeping businesses afloat,” the only thing kept afloat is
+          collateralized debt serviced and uncollateralized bailed out, at cost
+          of work deficit unappreciated out park durables the most operation
+          non-costable and maintainless no rent-seeking. Existing business trust
+          building for landlord lender insurer deficit, instead of capping rent
+          at 5 units or 30 days, not price, to worse the sale, and no script
+          barrier to drug entry nor immigration nor union
+          <br />
+          <br />
+          <a href="https://NickCarducci2022.com">#SalesTaxOnly</a>
+          &nbsp;#InvoicesAreTheft #ReverseM2Inflation #CashDebtGainLoss
+          #ImplausibleLandlordUse #SewagePolice NickCarducci2022.com Independent
+          candidate for 2022 US Senate for NJ. consumer protection x equity
+          protection (
+          <a href="https://johnshopkins.academia.edu/NickCarducci">
+            anti-credit, anti-rentier, Saver, bottom-right
+          </a>
+          ). UBI is not only laundering a century of m2 inflation (exponential,
+          compound-interest, 7.5%) over checking (7.5%), but war-mongering
+          (Booker, Menendez, Neodem, top-left)
+          <br />
+          <br />
+          <a href="https://github.com/NickCarducci/NickCarducci/blob/main/README.md">
+            Threat is legal
+          </a>
+          , plan of attack is not, castle doctrine over rent-seeking-colonialism
+          & counterfeit-in-contract credit and collusion of @uscourts to not
+          reimburse borrowers' customers money upon reposession, and not be
+          malfeasant in following the doctrine of impossibility and castle
+          doctrine, colluding with other governments under the false
+          advertisement of no easier option
           <br />
           <br />9 years to build a house / 4 months with 7 people
           <Insidious />
