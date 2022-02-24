@@ -236,9 +236,30 @@ export default class App extends React.Component {
           </a>
           {space}and nothing else in a perfectly efficient economy it would cost
           how much it takes to build (now about 2.9 years due to
-          counterfeit-wagering)
+          counterfeit-wagering),{space}
+          <a href="https://www.researchgate.net/figure/Graph-of-industrial-production-CPI-personal-income-and-wages-during-the-Great_fig1_334903501">
+            personal income v wages
+          </a>
           <br />
           <br />
+          <Cable
+            style={{
+              width: "300px"
+            }}
+            onError={handleScollImgError}
+            img={true}
+            src={
+              this.state.noyoutube
+                ? ""
+                : "https://www.dl.dropboxusercontent.com/s/wa3i38l9am5fb0f/Screen%20Shot%202022-02-24%20at%202.19.33%20AM.png?dl=0"
+            }
+            float="right"
+            title="https://www.researchgate.net/figure/Graph-of-industrial-production-CPI-personal-income-and-wages-during-the-Great_fig1_334903501"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
           <a href="https://30under5.us">30under5.us</a>
           <br />
           <br />
