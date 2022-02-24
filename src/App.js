@@ -218,6 +218,7 @@ export default class App extends React.Component {
             {/*"https://vianickcarducci.medium.com/optimal-security-for-webapps-dd2a65c2418c"*/}
             Optimal Security for WebApps
           </h2>
+          CORS Origin +<br />
           Login needs identifier and a dashboard for police with warning on only
           threats, non-objectivity not necessarily spam/harassment is a threat
           in defamation which is adjudicated after a cease and desist order by
@@ -230,6 +231,13 @@ export default class App extends React.Component {
           ). False or misinformation must be collaborated with for Public
           Health.
           <br />
+          <br />
+          Why is absolute whole number as also which way and variance from
+          current{space}
+          <a href="https://fred.stlouisfed.org/graph/?g=Moq5">
+            supposition of u (population) mean
+          </a>
+          , abject poverty is feeling the median skew.
           <br />
           <a href="https://fred.stlouisfed.org/graph/?g=MnMs">
             9 years of work to buy a median house
