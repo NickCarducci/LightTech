@@ -168,7 +168,7 @@ export default class App extends React.Component {
               src={
                 this.state.noyoutube
                   ? ""
-                  : "https://www.dl.dropboxusercontent.com/s/aj6j953nt8dy7ez/LightTech%20Certified%20%281%29.png?dl=0"
+                  : "https://www.dropbox.com/s/aj6j953nt8dy7ez/LightTech%20Certified%20%281%29.png?raw=1"
               }
               float={null}
               title="light-tech-certified"
@@ -259,7 +259,7 @@ export default class App extends React.Component {
             src={
               this.state.noyoutube
                 ? ""
-                : "https://www.dl.dropboxusercontent.com/s/wa3i38l9am5fb0f/Screen%20Shot%202022-02-24%20at%202.19.33%20AM.png?dl=0"
+                : "https://www.dropbox.com/s/wa3i38l9am5fb0f/Screen%20Shot%202022-02-24%20at%202.19.33%20AM.png?raw=1"
             }
             float="right"
             title="https://www.researchgate.net/figure/Graph-of-industrial-production-CPI-personal-income-and-wages-during-the-Great_fig1_334903501"
@@ -411,7 +411,7 @@ export default class App extends React.Component {
               src={
                 this.state.noyoutube
                   ? ""
-                  : "https://www.dl.dropboxusercontent.com/s/o1sfjemvvrltphz/6520305.png?dl=0"
+                  : "https://www.dropbox.com/s/o1sfjemvvrltphz/6520305.png?raw=1"
               }
               float="right"
               title="saverparty.xyz squirrel/chipmunk"
