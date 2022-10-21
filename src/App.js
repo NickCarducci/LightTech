@@ -107,6 +107,7 @@ export default class App extends React.Component {
     return (
       <div
         style={{
+          position: "relative",
           overflow: "hidden",
           paddingBottom: "100px",
           fontWeight: "bolder",
@@ -164,7 +165,7 @@ export default class App extends React.Component {
             }}
           >
             <Cable
-              style={{ width: "60px" }}
+              style={{ width: "60px", maxWidth: "300px" }}
               onError={handleScollImgError}
               img={true}
               src={
@@ -172,7 +173,7 @@ export default class App extends React.Component {
                   ? ""
                   : "https://www.dropbox.com/s/aj6j953nt8dy7ez/LightTech%20Certified%20%281%29.png?raw=1"
               }
-              float={null}
+              float={"right"}
               title="light-tech-certified"
               scrolling={this.state.scrolling}
               fwd={this["scrollImg" + scrollnum()]}
@@ -406,7 +407,7 @@ export default class App extends React.Component {
           power beyond arresting officer evidence or no jail for bail
           <br />
           <a href="https://foiegras.life">
-            <Cable
+            <Cable //https://www.quora.com/unanswered/Do-the-poor-benefit-from-wild-animals-in-nature
               style={{ width: "60px" }}
               onError={handleScollImgError}
               img={true}
@@ -435,7 +436,10 @@ export default class App extends React.Component {
           @northjersy dismayed potentially 2.4m nj registered-voters for Jo
           Jorgensen or a Nick Carducci write in unsolicited
           <Cable
-            style={{ height: "340px" }}
+            style={{
+              width: "300px",
+              height: "400px"
+            }}
             onError={handleScollImgError}
             //img={true}
             src={
@@ -452,8 +456,9 @@ export default class App extends React.Component {
           />
           <h2>
             free rider mutable state laundering profits of labor to small,
-            existing business. GIVE UPSTARTS A CHANCE $12k/year/p debt,
-            $3k/year/p bonds, $64/year/p checking
+            existing business. GIVE UPSTARTS A CHANCE{space}
+            <a href="https://thetax.party">$12k/year/p debt</a>, $3k/year/p
+            bonds, $64/year/p checking
           </h2>
           “Keeping businesses afloat,” the only thing kept afloat is
           collateralized debt serviced and uncollateralized bailed out, at cost
@@ -542,5 +547,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-
