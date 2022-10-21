@@ -107,6 +107,8 @@ export default class App extends React.Component {
     return (
       <div
         style={{
+          overflow: "hidden",
+          paddingBottom: "100px",
           fontWeight: "bolder",
           fontFamily: "'Shizuru', cursive",
           wordBreak: "break-word",
@@ -518,7 +520,27 @@ export default class App extends React.Component {
           <br />
           <br />
         </div>
+        <div
+          style={{
+            backgroundColor: "white",
+            position: "fixed",
+            bottom: "0px"
+          }}
+        >
+          <b>
+            <a href="https://disabilities.quora.com">hibit.cc</a>
+          </b>
+          <br />
+          <b>bankingisnot.biz</b>
+          {space}Aren’t the banks{space}
+          <a href="https://bankingisnot.biz">terrorists</a>? Why won’t they
+          settle? Shouldn't faggot as an analogy for a tool (that makes fire) be
+          notwithstanding homosexuality{space}
+          <a href="https://www.instagram.com/p/Cj9a4O1N-Iw/">already</a>?
+        </div>
       </div>
     );
   }
 }
+
+
