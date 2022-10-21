@@ -1,24 +1,19 @@
 import React from "react";
-//import ReactDOM from "react-dom";
-//import ReactHtmlParser from "react-html-parser";
-//import reactElementToJSXString from "react-element-to-jsx-string";
-//import ReactDOMServer from "react-dom/server";
-//import ExecutionEnvironment from "exenv";
-
-/*class Forward extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
-    return <div ref={this.props.fwdtwe} />;
-  }
-}*/
 
 class Cable extends React.Component {
   constructor(props) {
     super(props);
+    const { style: S } = props;
+    var initheight =
+        !S || (!isNaN(S.width) && isNaN(S.height)) ? "auto" : S.height,
+      initwidth =
+        !S || !isNaN(S.height) ? "auto" : !isNaN(S.width) ? 200 : S.width;
     this.state = {
+      mount: null,
+      optionalheight: initheight,
+      optionalwidth: initwidth,
+      initheight,
+      initwidth,
       limit: [],
       cache: null,
       mountsCount: 0,
@@ -26,121 +21,88 @@ class Cable extends React.Component {
       go: true
     };
     this.page = React.createRef();
-    this.fwdtwe = React.createRef();
   }
-  /*componentDidMount() {
-    if (ExecutionEnvironment.canUseDOM) {
-      this.setState({ go: true }, () => this.checkIfBetween());
-    }
-  }*/
   componentDidUpdate = (prevProps) => {
-    if (this.state.go && this.props.scrolling !== prevProps.scrolling) {
-      this.checkIfBetween();
-    }
-    if (this.state.loaded !== this.state.lastLoaded) {
+    if (this.state.mount !== this.state.lastmount)
+      this.setState({ lastmount: this.state.mount }, () => {
+        if (this.state.mount) {
+          if (!this.props.fwd || !this.props.fwd.current)
+            return this.setState({ mount: false });
+
+          console.log("mounted drop[wire]");
+          var initheight = this.state.optionalheight,
+            initwidth = this.state.optionalwidth;
+          clearTimeout(this.dyntime3);
+          this.dyntime3 = setTimeout(() => {
+            this.setState(
+              {
+                optionalheight: 0,
+                optionalwidth: 0,
+                firstheight: this.props.fwd.current.offsetHeight,
+                firstwidth: this.props.fwd.current.offsetWidth
+              },
+              () => {
+                if (![200, "auto"].includes(initwidth)) {
+                  var targetheight = this.state.firstheight;
+
+                  this.setState({
+                    optionalheight: targetheight
+                  });
+                } else this.setState({ optionalheight: initheight });
+
+                var targetwidth = this.state.firstwidth;
+                if (!["auto"].includes(initheight)) {
+                  this.setState({
+                    optionalwidth: targetwidth
+                  });
+                } else this.setState({ optionalwidth: initwidth });
+                this.setState({ resizing: true });
+              }
+            );
+          }, 2000);
+        }
+      });
+    if (
+      (this.state.go && this.props.scrolling !== prevProps.scrolling) ||
+      this.state.loaded !== this.state.lastLoaded
+    )
       this.setState(
         {
           lastLoaded: this.state.loaded
         },
         this.checkIfBetween
       );
-    }
   };
   componentWillUnmount = () => {
+    clearTimeout(this.dyntime3);
     clearTimeout(this.setset);
   };
   checkIfBetween = () => {
-    const { /*frameheight,*/ cache } = this.state;
-    const { /*scrollTopAndHeight,*/ scrollTop, girth, timeout } = this.props;
-    var girt =
-      girth && !isNaN(girth)
-        ? girth + 500
-        : window.innerHeight; /*frameheight
-        ? frameheight
-        : Style &&
-          Style.height &&
-          !isNaN(Style.height)
-        ? Style.height + 500
-        : 500;*/
+    const { cache } = this.state;
+    const { scrollTop, girth, timeout } = this.props;
+    var girt = girth && !isNaN(girth) ? girth + 500 : window.innerHeight;
     var timeou = timeout ? timeout : 1500;
     clearTimeout(this.setset);
     this.setset = setTimeout(() => {
       var page = this.page.current;
-      var between =
-        //Math.abs(scrollTop + page.offsetTop - window.scrollY) <
-        //girt + window.innerHeight;
-        Math.abs(page.offsetTop - scrollTop) < girt;
-      /*Number(`-${girt}`) &&
-        scrollTopAndHeight - page.offsetTop > Number(`-${girt}`);*/
-      /* Math.abs(
-            scrollTop +
-              page.offsetTop -
-              (window.scrollY +
-                window.innerHeight /
-                  2) /*+ window.innerHeight / 2 - page.offsetTop*
-          )
-          Math.abs(
-          scrollTop +
-            page.offsetTop -
-            (window.scrollY +
-              window.innerHeight /
-                2) /*+ window.innerHeight / 2 - page.offsetTop*
-        ) < girt; //Number(`-${girt}`);*/
-      //console.log(page.offsetTop);
+      var between = Math.abs(page.offsetTop - scrollTop) < girt;
       if (!this.state.mount) {
-        /*console.log(
-          Math.abs(scrollTop + page.offsetTop - window.scrollY),
-          scrollTop,
-          page.offsetTop,
-          window.scrollY ,
-          girt
-        );*/
-        //console.log(between, page.offsetTop, scrollTop);
-        /*between && */ this.setState({ mount: between }, () => {});
+        this.setState(
+          {
+            mount: between
+          },
+          () => {}
+        );
       } else {
         var continuee = this.props.fwd && this.props.fwd.current;
-        //between && console.log(between, continuee.outerHTML);
         if (!continuee && !cache) return;
-        /*const cacheStyle = JSON.parse(
-          (cache ? cache : continuee.outerHTML)
-            .split(`style="`)[1]
-            .split(`"`)[0]
-            .replaceAll(";", `",`)
-            .replaceAll(": ", `: "`)
-        );*/
-        //console.log(cacheStyle);
-        //console.log(cache, continuee.offsetHeight, continuee.offsetWidth);
-        if (!cache && (this.state.loaded || this.props.img)) {
-          //if (continuee.offsetHeight !== 0)
+        if (!cache && this.props.img) {
           this.setState({
             cache: continuee.outerHTML,
-            //cacheStyle,
             frameheight: continuee.offsetHeight,
             framewidth: continuee.offsetWidth
           });
         } else if (!between) {
-          //console.log("!between", continuee.outerHTML);
-          /* if (continuee) {
-                
-                const children = [...continuee.children];
-                console.log(children);
-                if (children.length > 0) {
-                  var gl = null;
-                  const foun = children.find(
-                    (x) => (gl = x.getContext("webgl"))
-                  );
-                  foun.addEventListener(
-                    "webglcontextlost",
-                    (e) => console.log(e),
-                    false
-                  );
-                  gl.getExtension("WEBGL_lose_context").loseContext();
-                }
-              }*/
-          //continuee.remove();
-          //if (scrollTop !== 0) return;
-          //continuee && continuee.remove();
-
           if (continuee) {
             while (continuee.children.length > 0) {
               continuee.remove(
@@ -148,19 +110,13 @@ class Cable extends React.Component {
               );
             }
           }
-          //      console.log(girt);
-          //if (Object.keys(page.children).length !== 0 /*page.innerHTML !== ""*/)
-          //return (page.innerHTML = "");
-          // this.setState({ mount: false });
-        } /*if (page.innerHTML === "") */ else {
+        } else {
           const children = [...page.children];
           if (
-            //frusterated the second, paniced the first" ca
             cache &&
             (children.length === 0 || !children.find((x) => x === cache))
           ) {
             console.log("reloading");
-            //console.log("replenishing, new scroll", cache);
             return (page.innerHTML = this.state.cache);
           }
         }
@@ -168,105 +124,72 @@ class Cable extends React.Component {
     }, timeou);
   };
   render() {
-    const { mount, stopfail /*, cacheStyle */ } = this.state;
-    const { src, float, title, img, style: Style } = this.props;
-    //const limited = limit.find((x) => x === Object.keys(this.props.fwd));
+    const { mount } = this.state;
+    const { src, float, title, img } = this.props;
     const onError = (e) => {
       this.setState({ stopfail: true });
-      //this.props.fwd.current.remove();
       this.props.onError(e);
-    }; //ternaries remove the node and element; display removes the element, but not the node
-    //const parsedStyle = JSON.parse(`{ ${cacheStyle} }`);
+    };
     const onLoad = (e) => {
-      console.log("loaded");
+      console.log("loaded (iframe) [drop]wire");
       this.setState({
         loaded: true
       });
     };
-    const optionalwidth =
-      !stopfail &&
-      /*(this.state.img || this.state.loaded) && this.state.framewidth
-        ? this.state.framewidth
-        :*/ this
-        .props.style &&
-      Style.width // &&
-        ? //!isNaN(Style.width)
-          Style.width
-        : 200;
-    const optionalheight =
-      !stopfail &&
-      /*this.state.height
-      ? this.state.height
-      :*/ Style &&
-      Style.height &&
-      (!isNaN(Style.height) ||
-        (Style.height.constructor === String &&
-          !isNaN(Number(Style.height.substring(0, Style.height.length - 2)))))
-        ? Style.height
-        : this.props.img
-        ? "min-content"
-        : "100%";
-    //console.log(optionalwidth);
+    const style = {
+      border: "0px gray solid",
+      width: this.state.resizing ? this.state.optionalwidth : null,
+      height: this.state.resizing ? this.state.optionalheight : 20
+    };
     return (
       <div
         ref={this.page}
         style={{
+          transition: ".3s ease-out",
+          textAlign: float,
           position: "relative",
           boxShadow: "inset 0px 0px 50px 15px rgb(200,100,120)",
-          //width: this.state.framewidth,
-          ...Style,
-          //overflowX: "auto",
-          shapeOutside: "rect()",
+          ...this.props.style,
+          ...style,
+          //shapeOutside: "rect()",
           float,
-          overflow: "hidden",
-          height: !this.state.loaded ? "" : optionalheight,
-          /*this.state.frameheight
-            ? this.state.frameheight + 10
-            : "max-content",*/
-          width: optionalwidth // "max-content"
-          //maxWidth: "100%"
-          //minWidth: optionalwidth // "max-content"
+          overflow: "hidden" //this.state.mount ? "hidden" : "auto"
         }}
       >
-        {src === "" || (!img && !mount) ? (
-          <span style={{ border: "2px gray solid" }}>{title}</span>
-        ) : img ? (
-          <img
-            //onLoad={onLoad}
-            onError={onError}
-            alt={title}
-            style={{
-              position: "relative",
-              //width: "100%",
-              border: src === "" ? "2px gray solid" : 0,
-              //...Style,
-              height: Style && !isNaN(Style.width) ? "auto" : optionalheight, //"100%"
-              width: Style && !isNaN(Style.height) ? "auto" : optionalwidth // "100%" // "max-content"
-              //overflowX: "auto",
-              //maxWidth: "100%"
-            }}
-            ref={this.props.fwd}
-            src={src}
-          />
-        ) : (
+        {src === "" ? (
+          <span style={style}>{title}</span>
+        ) : !img && mount ? (
           <iframe
             onLoad={onLoad}
             onError={onError}
             title={title}
             style={{
-              position: "relative",
-              //width: "100%",
+              ...style,
               border: 0,
-              //...Style,
-              //height: optionalheight,
-              //width: optionalwidth, // "max-content"
-              //overflowX: "auto",
-              height: "100%",
-              width: "100%"
+              width:
+                this.state.optionalwidth !== 200
+                  ? this.state.initwidth
+                  : "100%",
+              height: this.state.initheight
+            }}
+            ref={this.props.fwd}
+            src={src}
+            iframe={{ ...this.props.iframe }}
+          />
+        ) : mount ? (
+          <img
+            onError={onError}
+            alt={title}
+            style={{
+              ...style,
+              width: this.state.initwidth,
+              height: this.state.initheight
             }}
             ref={this.props.fwd}
             src={src}
           />
+        ) : (
+          <span style={{ border: "2px gray solid" }}>{title}</span>
         )}
       </div>
     );
