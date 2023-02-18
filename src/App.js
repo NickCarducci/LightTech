@@ -146,6 +146,21 @@ export default class App extends React.Component {
             maxWidth: "600px"
           }}
         >
+          <h2>
+            <a href="https://vau.money/login">
+              Representation not corporation, medics for all, provisional labor
+              organization; tax security first
+            </a>
+          </h2>
+          <h1>The treasury is real and no outright market to advance then</h1>
+          <h3>
+            <i style={{ color: "firebrick" }}>
+              Is a proprietorship or non-profit income from any other
+              businesses’ fundraising effort owned by the government during
+              probate?
+            </i>
+            {space}Anyway,
+          </h3>
           Add this to your corporate website if you:
           <br />
           1) are an&nbsp;<b>ngo</b>,&nbsp;<b>non-profit</b>, that pays&nbsp;
@@ -520,8 +535,10 @@ export default class App extends React.Component {
           cannot judge that which takes from their income
           <br />
           <br />
-          Libertarians think the market can weed out prisoners' dilemma &
-          fractional-reserves @NYCLibertarians @SaverParty
+          Libertarians think the market can{space}
+          <a href="https://commie.dev/anarchy">weed out</a>
+          {space}prisoners' dilemma & fractional-reserves @NYCLibertarians
+          @SaverParty
           <br />
           <br />
         </div>
@@ -535,6 +552,7 @@ export default class App extends React.Component {
           <b>
             <a href="https://disabilities.quora.com">hibit.cc</a>
           </b>
+          {space}
           <br />
           <b>bankingisnot.biz</b>
           {space}Aren’t the banks{space}
@@ -547,3 +565,4 @@ export default class App extends React.Component {
     );
   }
 }
+
