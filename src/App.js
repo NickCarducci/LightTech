@@ -152,7 +152,10 @@ export default class App extends React.Component {
               organization; tax security first
             </a>
           </h2>
-          <h1>The treasury is real and no outright market to advance then</h1>
+          <h1>
+            The treasury is real and no outright market to advance then (not for
+            sale)
+          </h1>
           <h3>
             <i style={{ color: "firebrick" }}>
               Is a proprietorship or non-profit income from any other
@@ -565,4 +568,3 @@ export default class App extends React.Component {
     );
   }
 }
-
