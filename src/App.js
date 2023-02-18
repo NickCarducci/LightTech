@@ -339,15 +339,21 @@ export default class App extends React.Component {
             <br />
             <br />
             Not witchcraft or nonconsensual idol, voodoo, totem
-            <br />
-            <a href="https://2052.live">marx is not communist</a>
+            <br />"<a href="https://marx.quora.com">marx</a>
+            {space}is not{space}
+            <a href="https://commie.dev">communist</a>"
             <div style={{ backgroundColor: "rgb(90,150,130)" }}>
-              I’ve made the statistical law that populations need to be shuffled
-              for significance to be true
+              I’ve made the{space}
+              <a href="https://humanharvest.info">statistical</a>
+              {space}law that populations need to be shuffled for significance
+              to be true
             </div>
             <br />
             pro-growth is not private-sector unless you are talking about
-            reproduction @larry_kudlow @fcc @77WABCradio https://30under5.us
+            reproduction{space}
+            <a href="https://landlordliquidity.quora.com">
+              @larry_kudlow @fcc @77WABCradio
+            </a>
             <br />
             <br />
             School is one of the schemes to keep youth from earning wealth while
