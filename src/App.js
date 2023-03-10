@@ -146,6 +146,7 @@ export default class App extends React.Component {
             maxWidth: "600px"
           }}
         >
+          Are ideas or copyrights fair to own? Or bad advice
           <h2>
             <a href="https://vau.money/login">
               Representation not corporation, medics for all, provisional labor
