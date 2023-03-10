@@ -146,7 +146,11 @@ export default class App extends React.Component {
             maxWidth: "600px"
           }}
         >
-          Are ideas or copyrights fair to own? Or bad advice
+          Can I not get a job because of my personality, I'm not applying
+          enough, or my ideology against taking credit as income?
+          <br />
+          Are ideas or copyrights fair to own?{space}
+          <a href="https://micro-theory.com">Or bad advice</a>
           <h2>
             <a href="https://vau.money/login">
               Representation not corporation, medics for all, provisional labor
