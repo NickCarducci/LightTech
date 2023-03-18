@@ -1,0 +1,39 @@
+{
+  "display": "standalone",
+  "scope": "./",
+  "short_name": "Light Tech certification",
+  "description": "Advantage margin to the consumer openly",
+  "screenshots": [
+    {
+      "alt": "no screenshots available yet",
+      "src": "/",
+      "type": "image/jpeg",
+      "sizes": "516x1116.67"
+    }
+  ],
+  "name": "Generous Certification",
+  "background_color": "#9749ff",
+  "icons": [
+    {
+      "src": "https://www.dl.dropboxusercontent.com/s/9oci4efa4zsh90q/Thumbprint_logo.png?dl=0",
+      "sizes": "64x64 32x32 24x24 16x16 192x192 194x194 512x512",
+      "type": "image/ico"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#9749ff",
+  "shortcuts": [
+    {
+      "name": "Home",
+      "url": "/",
+      "description": "Light-tech-certification",
+      "short_name": "LIGHTTECH",
+      "icons": [
+        {
+          "src": "https://www.dl.dropboxusercontent.com/s/9oci4efa4zsh90q/Thumbprint_logo.png?dl=0",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
